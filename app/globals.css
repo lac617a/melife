@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  --tw-bg-opacity: 1;
+  background-color: #e2e8f0;
+}
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  opacity: 1;
+
+  --tw-contrast: contrast(300%);
+  --tw-brightness: brightness(100%);
+
+  mix-blend-mode: overlay;
+  background-image: radial-gradient(circle at 50% 40%, transparent, rgba(0, 0, 0, .35)), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10000 10000'%3E%3Cfilter id='a'%3E%3CfeTurbulence baseFrequency='1' numOctaves='3' stitchTiles='stitch' type='fractalNoise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-size: cover;
+  filter: var(--tw-blur) brightness(100%) contrast(300%) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+main::before,
+main::after {
+  position: absolute;
+  z-index: -1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
+main::before {
+  content: "";
+  left: 0;
+  background-image: url("/image/happy.png");
+}
+
+main::after {
+  content: "";
+  right: 0;
+  bottom: 0;
+  background-image: url("/image/sad.png");
+}
