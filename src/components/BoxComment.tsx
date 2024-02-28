@@ -36,7 +36,7 @@ const BoxComment: React.FC<Props> = (props) => {
         reply_messages.map((item, index) => (
           <React.Fragment key={index}>
             <div className="text-gray-300 font-bold pl-14">|</div>
-            <div className={classNames(baseClass, "ml-5")}>
+            <div className={classNames(baseClass, "ml-5 max-w-[95%]")}>
               <div className="p-3 w-full">
                 <p className="text-gray-600 text-sm mt-2 pointer-events-none font-semibold">
                   {item.message}

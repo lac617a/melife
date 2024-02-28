@@ -27,13 +27,6 @@
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   font-family: "Quicksand", sans-serif;

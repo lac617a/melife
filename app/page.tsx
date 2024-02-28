@@ -67,7 +67,7 @@ export default function Home() {
     <main className="flex min-h-screen max-w-[550px] flex-col gap-6 m-auto p-5">
       <h1 className="font-bold text-3xl text-center">¿Cómo te sientes hoy?</h1>
       <div className="overflow-y-auto h-[calc(100vh_-_270px)]">
-        <div className="flex-1 w-full overflow-x-hidden px-5">
+        <div className="flex-1 w-full overflow-x-hidden lg:px-5">
           {messages.map((item) => (
             <BoxComment
               key={item.uuid}
@@ -110,7 +110,7 @@ export default function Home() {
       </div>
       <div
         className={classNames(
-          "absolute bottom-[7%] left-[20%]",
+          "absolute lg:bottom-[8%] lg:left-[10%] bottom-[20%] left-[33%]",
           replyId ? "animate-fade-up animate-once" : "opacity-0"
         )}
       >
