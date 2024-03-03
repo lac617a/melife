@@ -84,3 +84,32 @@ main::after {
   bottom: 0;
   background-image: url("/image/sad.png");
 }
+
+.pulse {
+  display: inline-flex;
+  text-align: end;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background-color: #00FF85;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 255, 133, 0.4);
+  }
+
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 255, 133, 0.4);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 255, 133, 0.4);
+  }
+}

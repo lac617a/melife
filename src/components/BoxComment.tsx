@@ -33,10 +33,15 @@ const BoxComment: React.FC<Props> = (props) => {
         </div>
       </div>
       {reply_messages?.length > 0 &&
-        reply_messages.map((item, index) => (
-          <React.Fragment key={index}>
+        reply_messages.map((item) => (
+          <React.Fragment key={item.uuid}>
             <div className="text-gray-300 font-bold pl-14">|</div>
-            <div className={classNames(baseClass, "ml-5 max-w-[95%]")}>
+            <div
+              className={classNames(
+                baseClass,
+                "ml-5 max-w-[95%] max-ms:max-w-[93%]"
+              )}
+            >
               <div className="p-3 w-full">
                 <p className="text-gray-600 text-sm mt-2 pointer-events-none font-semibold">
                   {item.message}
@@ -56,4 +61,4 @@ const BoxComment: React.FC<Props> = (props) => {
   );
 };
 
-export default React.memo(BoxComment);
+export default BoxComment;
